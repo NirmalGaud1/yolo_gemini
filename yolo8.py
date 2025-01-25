@@ -25,11 +25,9 @@ def load_yolo():
 
 @st.cache_resource
 def load_gemini():
-    # 🔒 Replace with your actual API key (TEMPORARY USE ONLY)
     API_KEY = "AIzaSyA-9-lTQTWdNM43YdOXMQwGKDy0SrMwo6c"
-    
     genai.configure(api_key=API_KEY)
-    return genai.GenerativeModel('gemini-pro-vision')
+    return genai.GenerativeModel('gemini-1.5-flash')
 
 yolo_model = load_yolo()
 gemini_model = load_gemini()
